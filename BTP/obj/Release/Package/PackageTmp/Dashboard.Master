@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="BTP.Dashboard" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BTP</title>
+    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&amp;display=swap" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="mainForm" runat="server">
+        <main>
+            <div class="show-dashboard"><img src="icons/menu.svg"/></div>
+            <div class="dashboard">
+                <div class="x"><img src="icons/x.svg"/></div>
+                <h1><a href="accueil.aspx"><img src="images/logo.png" />PFE</a></h1>
+                <ul>
+                    <li><a class="list" data-list="projet">Projets<img src="icons/chevron-down.svg" /></a>
+                        <ul class="projet sublinks">
+                            <li><a href="projets.aspx">Projets</a></li>
+                            <li><a href="liste-projets.aspx">Liste Des Projets</a></li>
+                            <% if (Session["type"].ToString() == "Directeur") { %>
+                            <li><a href="add-projet.aspx">Propose une Projet</a></li>
+                            <% } %>
+                        </ul>
+                    </li>
+                    <li><a class="list" data-list="livrable">Livrables<img src="icons/chevron-down.svg" /></a>
+                        <ul class="livrable sublinks">
+                            <li><a href="livrables.aspx">Livrables</a></li>
+                            <li><a href="liste-livrables.aspx">Liste Des Livrables</a></li>
+                            <li><a href="add-livrable.aspx">Ajouter un Livrable</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ressource.aspx">Ressources</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <nav>
+                    <h2 class="header"><%=Session["Title"] %></h2>
+                    <section>
+                        <div class="search-box">
+                            <input type="text" runat="server" placeholder="Recherche..." />
+                            <a href="#">
+                                <img src="icons/search.svg" />
+                                <asp:Button ID="ButtonSearch" runat="server" OnClick="ButtonSearch_Click" />
+                            </a>
+                        </div>
+                        <div class="user">
+                            <span><%=Session["user"] %> &nbsp; <img src="icons/profile.svg" /></span>
+                            <ul class="logout">
+                                <li><asp:Button ID="ButtonProfile" runat="server" Text="Profile" OnClick="ButtonProfile_Click" /></li>
+                                <li><asp:Button ID="ButtonLogout" runat="server" Text="Logout" OnClick="ButtonLogout_Click" /></li>
+                            </ul>
+                        </div>
+                    </section>
+                </nav>
+                <section>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder_" runat="server">
+                </asp:ContentPlaceHolder>
+                    <footer>
+                        <p>Copyright 2020 &copy; PFE.</p>
+                        <p>Designed by Younes &amp; Fatima &amp; Ihssane</p>
+                        <section>
+                            <a><img src="icons/facebook.svg" /></a>
+                            <a><img src="icons/linkedin.svg" /></a>
+                            <a><img src="icons/github.svg" /></a>
+                        </section>
+                    </footer>
+                </section>
+            </div>
+        </main>
+    </form>
+    <script src="scripts/jquery-3.5.1.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

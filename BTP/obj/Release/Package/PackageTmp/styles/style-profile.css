@@ -1,0 +1,64 @@
+﻿.container {
+    width: 1330px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 14px;
+}
+
+    .container .card {
+        width: 20%;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: center;
+        box-shadow: 0px 0px 10px #999;
+        padding: 44px 22px;
+        border-bottom: 8px solid #fbbb00;
+        position: relative;
+    }
+
+        .container .card .option {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            cursor: pointer;
+        }
+
+            .container .card .option svg {
+                width: 30px;
+            }
+
+        .container .card img {
+            width: 80%;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .container .card h2,
+        .container .card h3 {
+            width: 80%;
+            font-weight: 100;
+        }
+
+        .container .card hr {
+            width: 100%;
+        }
+
+        .container .card .actual,
+        .container .card .finished {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 6px 0;
+        }
+
+            .container .card .actual strong,
+            .container .card .actual span,
+            .container .card .finished strong,
+            .container .card .finished span {
+                display: block;
+            }
+.container .projets {
+    width: 78%;
+}

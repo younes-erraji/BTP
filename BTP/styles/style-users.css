@@ -1,0 +1,109 @@
+﻿.container div.buttons {
+    display: flex;
+}
+    .container div.buttons span {
+        width: 30%;
+        border: none;
+        background-color: #f77b5f;
+        color: #fff;
+        font-size: 1.7rem;
+        padding: 10px 7px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0 12px;
+        text-align: center;
+        opacity: .7;
+        transition: opacity .7s;
+    }
+        .container div.buttons span:hover,
+        .container div.buttons span.active {
+            opacity: 1;
+        }
+        section .container hr {
+            border: none;
+            border-bottom: 2px solid #aec178;
+            margin: 18px 0;
+        }
+
+section .container .grid {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    section .container .grid tr {
+        border: none;
+        border-bottom: 0.4px solid #ddd;
+        border-top: 0.4px solid #ddd;
+    }
+
+        section .container .grid tr td,
+        section .container .grid tr th {
+            text-align: center;
+            padding: 0.8rem 0;
+            border: none;
+        }
+
+        section .container .grid tr th {
+            color: #888;
+        }
+
+        section .container .grid tr:nth-child(even) {
+            background-color: #fff;
+        }
+section .container .navigation section:nth-child(2) {
+    display: none;
+}
+.mise {
+    display: grid;
+    grid-template-columns: 80% 1% 18%;
+    justify-content: space-between;
+    grid-gap: 4px
+}
+    .mise table {
+        width: 80%;
+    }
+    .mise .vr {
+        background-color: #98efa1;
+        height: 100%;
+    }
+.mise table input,
+.mise table select {
+    background-color: #fff;
+    border: 0;
+    border-bottom: 2px solid #3f3f3f;
+    color: #666;
+    padding: 0.4rem 1.4rem;
+    width: 88%;
+    margin-bottom: 0.8rem;
+}
+.mise .edit-users {
+    display: flex;
+    flex-direction: column;
+}
+    .mise .edit-users input {
+        width: 100%;
+        padding: 0.3em 1.2em;
+        margin: 14px 0;
+        border: 1px solid rgba(255, 255, 255, 0);
+        border-radius: 4px;
+        color: #ffffff;
+        transition: border-color 0.8s;
+        cursor: pointer;
+        min-height: 44px;
+    }
+
+        .mise .edit-users input:hover {
+            border-color: white;
+        }
+
+        .mise .edit-users input:first-child {
+            background-color: #f14e4e;
+        }
+
+        .mise .edit-users input:nth-child(2) {
+            background-color: #f1bb4e;
+        }
+
+        .mise .edit-users input:nth-child(3) {
+            background-color: #84f14e;
+        }

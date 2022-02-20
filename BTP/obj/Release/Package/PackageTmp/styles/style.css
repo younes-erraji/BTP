@@ -1,0 +1,260 @@
+﻿main {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+main .show-dashboard {
+  position: fixed;
+  top: 58px;
+  width: 24px;
+  height: 24px;
+  background-color: coral;
+  border-radius: 0 8px 8px 0;
+  padding: 2px;
+  left: 0;
+  cursor: pointer;
+}
+
+main .show-dashboard img {
+  width: 100%;
+  height: 100%;
+}
+main .dashboard {
+  height: 100vh;
+  overflow: auto;
+  position: sticky;
+  top: 0;
+  background-color: #2c3e50;
+}
+main .dashboard .x {
+  display: none;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  cursor: pointer;
+}
+main .dashboard h1 {
+  margin: 0;
+  padding: 0.4rem;
+  font-family: Itim, Poppins, Arial;
+}
+
+main .dashboard h1 a {
+  display: flex;
+  align-items: center;
+}
+
+main .dashboard h1 a img {
+  height: 3.8rem;
+  margin: 0 0.2rem;
+}
+
+main .dashboard > ul {
+  padding: 0.8rem;
+  font-size: 2rem;
+}
+
+main .dashboard > ul li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  margin: 1rem 0;
+  transition: color 0.8s;
+}
+
+main .dashboard > ul li a img {
+  height: 18px;
+  margin: 0 0.4rem;
+}
+
+main .dashboard > ul li a:hover {
+  color: #ecf0f1;
+}
+
+main .dashboard > ul li ul {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #636e72;
+  display: none;
+}
+
+main .dashboard > ul li ul li a {
+  display: block;
+  transition: transform 0.8s;
+}
+
+main .dashboard > ul li ul li a:hover {
+  transform: translateX(0.2rem);
+  color: #dff9fb;
+}
+
+main .content nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #636e72;
+  border-bottom: 0.4px solid #3f4a54;
+}
+
+main .content nav .header {
+  margin: 0 7px;
+  color: #eee;
+  padding: 0.4rem;
+}
+    main .content nav section {
+        display: flex;
+        align-items: center;
+    }
+        main .content nav section .user {
+            margin: 0 8px;
+            position: relative;
+            height: 100%;
+        }
+            main .content nav section .user span {
+                color: #fff;
+                cursor: pointer;
+                font-size: 1.9rem;
+                display: flex;
+                align-items: center;
+            }
+                main .content nav section .user span img {
+                    width: 44px;
+                    height: 44px;
+                }
+            main .content nav section .user .logout {
+                display: none;
+                position: absolute;
+                width: 186px;
+                right: -8px;
+                top: 50px;
+                border-radius: 0 0 4px 4px;
+                padding: 14px;
+                color: #fff;
+                text-align: center;
+                background-color: #34495e;
+            }
+                    main .content nav section .user .logout li input {
+                        cursor: pointer;
+                        border: none;
+                        width: 100%;
+                        background-color: transparent;
+                        outline: none;
+                        color: #fff;
+                        padding: 8px;
+                        font-size: 18px;
+                    }
+                        main .content nav .search-box {
+                            background: #2f3640;
+                            width: 228px;
+                            height: 48px;
+                            border-radius: 7px;
+                            padding: 4px 7px;
+                            margin: 3px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+main .content nav .search-box > input {
+  border: none;
+  outline: none;
+  background: none;
+  display: block;
+  width: calc(100% - 48px);
+  padding: 0 8px;
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 48px;
+}
+
+main .content nav .search-box input:focus,
+main .content nav .search-box input:invalid {
+  outline: none;
+  box-shadow: none;
+}
+
+main .content nav .search-box a {
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+  border-radius: 18px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+main .content nav .search-box a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+main .content nav .search-box a input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  cursor: pointer;
+}
+main .content section .container {
+  padding: 1.4rem;
+  min-height: calc(100vh - 211.2px);
+  margin-top: 20px;
+}
+main .content section footer {
+  width: 100%;
+  text-align: right;
+  padding: 2rem;
+  background-color: #2d3436;
+  color: #fff;
+}
+
+main .content section footer p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+main .content section footer section {
+  width: 100%;
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main .content section footer section img {
+  width: 3.8rem;
+  height: 3.8rem;
+  margin-inline: 0.2rem;
+}
+@media (max-width: 575.98px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  main .dashboard {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 8;
+    overflow: auto;
+  }
+
+  main .dashboard .x {
+    display: block;
+  }
+}
